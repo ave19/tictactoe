@@ -91,7 +91,7 @@ public class Tictactoe
 			}
 		}
 
-	// plays a turn in tic tac toe returns new boardnum or -1 if invalad place
+	// plays a turn in tic tac toe returns new boardnum or -1 if invalid place
 	public static int turn(int boardnum,int player,int place)
 		{
 		int[] board=new int[9];
