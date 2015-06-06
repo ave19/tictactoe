@@ -64,11 +64,11 @@ public class Tictactoe
 					boardnum=choice;
 					if(wintest(boardnum)!=0)
 						{
-						System.out.print("player ");
+						System.out.print("\n\nCongratulations player ");
 						if(wintest(boardnum)==1)
-							System.out.println("x won");
-						else
-							System.out.println("o won");
+							System.out.println("X, you won!");
+						else	
+							System.out.println("O, you won!");
 						printboard(boardnum);
 						player=0;
 						break;
@@ -149,22 +149,38 @@ public class Tictactoe
 			win[temp]=boardnum%10;
 			boardnum=boardnum/10;
 			}
-		if(win[0]==win[1]&&win[0]==win[2]&&win[0]!=0)// xxx000000 012
+		if(win[0]==win[1]&&win[0]==win[2]&&win[0]!=0) { // xxx000000 012
+//			System.out.println("case 012");
 			return win[0];
-		if(win[3]==win[4]&&win[3]==win[5]&&win[3]!=0)// 000xxx000 345
+		}
+		if(win[3]==win[4]&&win[3]==win[5]&&win[3]!=0) { // 000xxx000 345
+//			System.out.println("case 345");
 			return win[3];
-		if(win[6]==win[7]&&win[6]==win[8]&&win[6]!=0)// 000000xxx 678
+		}
+		if(win[6]==win[7]&&win[6]==win[8]&&win[6]!=0) { // 000000xxx 678
+//			System.out.println("case 678");
 			return win[6];
-		if(win[0]==win[3]&&win[0]==win[6]&&win[0]!=0)// x00x00x00 036
+		}
+		if(win[0]==win[3]&&win[0]==win[6]&&win[0]!=0) { // x00x00x00 036
+//			System.out.println("case 036");
 			return win[0];
-		if(win[1]==win[4]&&win[1]==win[7]&&win[1]!=0)// 0x00x00x0 147
+		}
+		if(win[1]==win[4]&&win[1]==win[7]&&win[1]!=0) { // 0x00x00x0 147
+//			System.out.println("case 147");
 			return win[1];
-		if(win[2]==win[5]&&win[2]==win[8]&&win[2]!=0)// 00x00x00x 258
+		}
+		if(win[2]==win[5]&&win[2]==win[8]&&win[2]!=0) { // 00x00x00x 258
+//			System.out.println("case 258");
 			return win[2];
-		if(win[0]==win[4]&&win[0]==win[8]&&win[0]!=0)// x000x000x 048
+		}
+		if(win[0]==win[4]&&win[0]==win[8]&&win[0]!=0) { // x000x000x 048
+//			System.out.println("case 048");
 			return win[0];
-		if(win[2]==win[6]&&win[2]==win[6]&&win[2]!=0)// 00x0x0x00 246
+		}
+		if(win[2]==win[4]&&win[2]==win[6]&&win[2]!=0) { // 00x0x0x00 246
+//			System.out.println("case 246");
 			return win[2];
+		}
 		return 0;
 		}
 	}
